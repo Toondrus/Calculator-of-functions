@@ -151,4 +151,51 @@ int main()
 		    Clear_Memory(Matrix, Size);
 		    break;
 		}
+		case 3:
+		{
+			system("cls");
+			int Matrix1[20][20], Matrix2[20][20];
+			int Lines1, Lines2, Lines3;
+			int Columns1, Columns2, Columns3;
+			int Fin_Matrix[20][20];
+			cout << "Lines and columns of first matrix" << endl;
+			cout << "Lines: "; cin >> Lines1;
+			cout << "Columns: "; cin >> Columns1; 
+			cout << "\n";
+			cout << "Input first matrix" << endl;
+			Input_Matrix(Lines1, Columns1, Matrix1);
+			cout << "\n";
+			cout << "First matrix: "<< endl;
+			Output_Matrix(Lines1, Columns1, Matrix1);
+			cout << "\n";
+			cout << "Lines and columns of second matrix" << endl;
+			cout << "Lines: "; cin >> Lines2;
+			cout << "Columns: "; cin >> Columns2;
+			cout << "\n";
+			cout << "Input second matrix" << endl;
+			Input_Matrix(Lines2, Columns2, Matrix2);
+			cout << "\n";
+			cout << "Second matrix: " << endl;
+			Output_Matrix(Lines2, Columns2, Matrix2);
+			system("pause"); 
+			system("cls"); 
+			cout << "First matrix: "<< endl;
+			Output_Matrix(Lines1, Columns1, Matrix1);
+			cout << "\n";
+			cout << "Second matrix: " << endl;
+			Output_Matrix(Lines2, Columns2, Matrix2);
+			Lines3 = Lines1;
+			Columns3 = Columns2;
+			cout << "\n";
+			if (Columns1 != Lines2)
+			{
+				cout << "Unreal";
+			}
+			else
+			{
+				cout << "Composition:" << endl;
+				Mult_Matrix(Lines1, Lines2, Columns1, Columns2, Matrix1, Matrix2, Fin_Matrix);
+			}
+			break;
+		}
 }
