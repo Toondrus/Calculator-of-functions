@@ -79,3 +79,17 @@ int Find_Det(int** Matrix, int Size)
         return Det;
     }
 }
+int main()
+{
+    int Variant;
+	cout << "1. Quadratic equation" << endl;
+	cout << "2. Deteminant of square matrix" << endl;
+	cout << "3. Multiplication matrix on matrix" << endl;
+	cout << "4. Transposition of matrix" << endl;
+	cout << "5. Multiplication matrix on number" << endl;
+	cout << "0. Exit" << endl;
+	cout << "Choose variant: ";
+	cin >> Variant;
+    switch(Variant)
+	{
+}
