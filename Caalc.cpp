@@ -248,4 +248,11 @@ int main()
 			Output_Matrix(Lines, Columns, Matrix);
 			break;
 		}
+		case 0:
+		{
+			system("cls");
+			cout << "Bye :)" << endl;
+			break;
+		}
+	}
 }
