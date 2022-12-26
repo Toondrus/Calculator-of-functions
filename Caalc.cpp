@@ -198,4 +198,34 @@ int main()
 			}
 			break;
 		}
+		case 4:
+		{
+			system("cls");
+			int Lines, Columns;
+			int Matrix[20][20];
+			cout << "Input number of lines: "; cin >> Lines;
+			cout << "Input number of columns: "; cin >> Columns;
+			Input_Matrix(Lines, Columns, Matrix);
+			cout << "\n";
+			cout << "Source matrix:" << endl;
+			Output_Matrix(Lines, Columns, Matrix);
+			cout << "\n";
+			cout << "Transposed matrix:" << endl;
+			for (int j = 0; j < Columns; j++)
+			{
+				for (int i = 0; i < Lines; i++)
+				{
+					for (int k = 0; k < Columns; k++)
+					{
+						if (k == j)
+						{
+							Matrix[j][i] = Matrix[i][k];
+							cout.width(7); cout << Matrix[j][i];
+						}
+					}
+				}
+				cout << endl;
+			}
+			break;
+		}
 }
