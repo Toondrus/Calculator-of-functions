@@ -1,3 +1,6 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
 void Input_Matrix(int Lines, int Columns, int Matrix[20][20])
 {
     for(int i = 0; i < Lines; i++)
