@@ -228,4 +228,24 @@ int main()
 			}
 			break;
 		}
+		case 5:
+		{
+			system("cls");
+			int Lines, Columns, Multiplier;
+			int Matrix[20][20];
+			cout << "Input number of lines: "; cin >> Lines;
+			cout << "Input number of columns: "; cin >> Columns;
+			Input_Matrix(Lines, Columns, Matrix);
+			cout << "\n";
+			cout << "Input multiplier: "; cin >> Multiplier;
+			for (int i = 0; i < Lines; i++)
+			for (int j = 0; j < Columns; j++)
+			{
+				Matrix[i][j] *= Multiplier;
+			}
+			cout << "\n";
+			cout << "Composed matrix:" << endl;
+			Output_Matrix(Lines, Columns, Matrix);
+			break;
+		}
 }
