@@ -46,4 +46,36 @@ void Clear_Memory(int** Matrix, int Size)
     }
         delete [] Matrix;        
 }
+int Find_Det(int** Matrix, int Size) 
+{ 
+    if (Size == 1)
+        return Matrix[0][0];
+    else if (Size == 2)
+        return Matrix[0][0] * Matrix[1][1] - Matrix[0][1] * Matrix[1][0];
+    else 
+	{
+        int Det = 0;
+        for (int k = 0; k < Size; k++) 
+		{
+            int** M = new int*[Size-1];
+                for (int i = 0; i < Size - 1; i++) 
+				{
+                    M[i] = new int[Size - 1];
+            	}
+            for(int i = 1; i < Size; i++) 
+			{
+                int t = 0;
+                for(int j = 0; j < Size; j++) 
+				{
+                    if (j == k)
+                        continue;
+                    M[i-1][t] = Matrix[i][j];
+                    t++;
+                }
+            }
+            Det += pow(-1, k + 2) * Matrix[0][k] * Find_Det(M, Size - 1);
+            Clear_Memory(M, Size - 1);
+        }
+        return Det;
+    }
 }
