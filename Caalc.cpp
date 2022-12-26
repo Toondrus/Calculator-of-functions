@@ -38,3 +38,12 @@ void Mult_Matrix(int Lines1, int Lines2, int Columns1, int Columns2, int Matrix1
 	}
 	Output_Matrix(Lines3, Columns3, Fin_Matrix);
 }
+void Clear_Memory(int** Matrix, int Size) 
+{ 
+    for(int i = 0; i < Size; i++) 
+	{
+        delete[] Matrix[i];
+    }
+        delete [] Matrix;        
+}
+}
