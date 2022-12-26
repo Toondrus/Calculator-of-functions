@@ -126,4 +126,29 @@ int main()
 			}
 			break;
 		}
+		case 2:
+		{
+			system("cls");
+		    int Size;
+		    cout << "Input a size of matrix: "; cin >> Size;
+		    int** Matrix = new int*[Size];
+		    for (int i = 0; i < Size; i++) 
+			{
+		        Matrix[i] = new int[Size];
+		    }
+		    cout << "\n";
+			cout << "Input a matrix: " << endl;
+		    for (int Lines = 0; Lines < Size; Lines++) 
+			{
+		        for (int Columns = 0; Columns < Size; Columns++) 
+				{
+		        	cout << "Matrix[" << Lines << "][" << Columns << "]";
+		            cin >> Matrix[Lines][Columns]; 
+		        }
+		    }
+		    cout << "\n";
+			cout << "Found determinant: " << Find_Det(Matrix, Size) << endl;
+		    Clear_Memory(Matrix, Size);
+		    break;
+		}
 }
