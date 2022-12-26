@@ -92,4 +92,38 @@ int main()
 	cin >> Variant;
     switch(Variant)
 	{
+		case 1:
+		{
+			system("cls");
+			float First_coeff;
+			float Second_coeff;
+			float Third_coeff;
+			float x_0, x_1, x_2;
+			float D;
+			cout << "Input coefficiens of equetion" << endl;
+			cout << "First coefficient: "; cin >> First_coeff;
+			cout << "Second coefficient: "; cin >> Second_coeff;
+			cout << "Third coefficient: "; cin >> Third_coeff; 
+			D = Second_coeff * Second_coeff - 4 * First_coeff * Third_coeff; 
+			cout << "\n";
+			cout << "D = " << D << endl;
+			if (D < 0) 
+			{
+				cout << "The discriminant is less than zero. The quadratic equation has no roots" << endl;
+			}
+			else if (D == 0) 
+			{
+				x_0 = (-First_coeff) / 2 * First_coeff;
+				cout << "The discriminant is zero. The quadratic equation has 1 real root"<< " " << "x = " << x_0 << endl;
+			}
+			else if (D > 0) 
+			{
+				x_1 = (-Second_coeff + sqrt(D)) / (2 * First_coeff);
+				x_2 = (-Second_coeff - sqrt(D)) / (2 * First_coeff);
+				cout << "The discriminant is greater than zero. The quadratic equation has 2 real roots:" << endl;
+				cout << "x_1 = " << x_1 << endl;
+				cout << "x_2 = " << x_2 << endl;	
+			}
+			break;
+		}
 }
