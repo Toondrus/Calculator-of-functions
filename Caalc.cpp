@@ -58,7 +58,7 @@ int Find_Det(int** Matrix, int Size)
         for (int k = 0; k < Size; k++) 
 		{
             int** M = new int*[Size-1];
-                for (int i = 0; i < Size - 1; i++) 
+                for(int i = 0; i < Size - 1; i++) 
 				{
                     M[i] = new int[Size - 1];
             	}
@@ -138,9 +138,9 @@ int main()
 		    }
 		    cout << "\n";
 			cout << "Input a matrix: " << endl;
-		    for (int Lines = 0; Lines < Size; Lines++) 
+		    for(int Lines = 0; Lines < Size; Lines++) 
 			{
-		        for (int Columns = 0; Columns < Size; Columns++) 
+		        for(int Columns = 0; Columns < Size; Columns++) 
 				{
 		        	cout << "Matrix[" << Lines << "][" << Columns << "]";
 		            cin >> Matrix[Lines][Columns]; 
